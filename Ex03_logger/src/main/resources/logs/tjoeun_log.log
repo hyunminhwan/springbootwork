@@ -1,0 +1,3 @@
+2024-08-06 12:24:47 [main] [INFO ] c.s.s.Ex03LoggerApplication : Starting Ex03LoggerApplication using Java 17 with PID 28228 (C:\hmh\springbootwork\Ex03_logger\bin\main started by hoh33 in C:\hmh\springbootwork\Ex03_logger)
+2024-08-06 12:24:47 [main] [INFO ] c.s.s.Ex03LoggerApplication : No active profile set, falling back to 1 default profile: "default"
+2024-08-06 12:24:47 [main] [INFO ] c.s.s.Ex03LoggerApplication : Started Ex03LoggerApplication in 1.104 seconds (process running for 1.614)
