@@ -2,27 +2,24 @@ package com.study.springboot.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import lombok.Setter;
-import lombok.ToString;
 
-/*@Setter
+/*
+@Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString*/
+@ToString
+*/
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Board {
 	@NonNull
-	private int boardno; 
-	@NonNull
+	private int boardno;
 	private String title;
 	private String writer;
 	private String content;
-	
-	
 }

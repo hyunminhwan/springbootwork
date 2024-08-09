@@ -8,7 +8,6 @@ public class Ex02AnnotationDiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Ex02AnnotationDiApplication.class, args);
-		
 	}
 
 }

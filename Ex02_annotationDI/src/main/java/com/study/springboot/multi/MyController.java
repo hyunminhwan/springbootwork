@@ -3,14 +3,14 @@ package com.study.springboot.multi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-//@Controller : Bean으로 등록하는 것은 같음
-/*
-	어떤 기능을 수행하는 경우는 @Controller
-	의존성 주입에 사용되는 경우는 @Component
-	
-*/
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+// @Controller : bean으로 등록하는 것은 같음
+/*
+    어떤 기능을 수행하는 경우는 @Controller
+    의존성 주입에 사용되는 경우는 @Component
+ */
 @Controller
 public class MyController {
 	@Autowired
@@ -25,6 +25,7 @@ public class MyController {
 	
 	@RequestMapping("/")
 	public @ResponseBody String root() {
-		return "스프링 부트 어려운데?";
+		return "Annotation DI 사용하기";
 	}
+
 }

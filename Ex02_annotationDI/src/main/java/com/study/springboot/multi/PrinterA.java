@@ -7,8 +7,6 @@ public class PrinterA implements Printer {
 
 	@Override
 	public void print(String msg) {
-		System.out.println("printerA : "+msg);
-
+		System.out.println("PrinterA : " + msg);
 	}
-
 }

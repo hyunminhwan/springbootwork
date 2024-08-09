@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-	out.print("test1asdasfas");
+	out.print("test1 화면");
 %>
 </body>
 </html>
