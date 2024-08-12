@@ -24,17 +24,17 @@ import lombok.NoArgsConstructor;
 @EntityListeners(AuditingEntityListener.class)
 @Entity(name="member03")
 public class Member {
-	@Id
-	private String id;
-	private String name;
-	private String password;
-	
-	// 엔티티의 생성될때 날짜와시간 저장
-	@CreatedDate
-	@Column(name="create_at")
-	private LocalDateTime createAt;
-	
-	@LastModifiedDate  	// 엔티티가 수정될 때 날짜와 시간 저장
-	@Column(name="update_at")
-	private LocalDateTime updateAt;
+   @Id
+   private String id;
+   private String name;
+   private String password;
+   
+   // 엔티티의 생성될때 날짜와시간 저장
+   @CreatedDate
+   @Column(name="create_at")
+   private LocalDateTime createAt;
+   
+   @LastModifiedDate     // 엔티티가 수정될 때 날짜와 시간 저장
+   @Column(name="update_at")
+   private LocalDateTime updateAt;
 }

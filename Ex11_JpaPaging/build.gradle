@@ -13,9 +13,8 @@ java {
 		languageVersion = JavaLanguageVersion.of(17)
 	}
 }
-
 eclipse.wtp.facet {
-   facet name : 'jst.web', version: '5.0'
+	facet name : 'jst.web', version: '5.0'
 }
 
 configurations {

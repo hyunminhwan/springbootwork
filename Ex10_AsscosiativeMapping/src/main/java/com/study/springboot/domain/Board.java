@@ -17,9 +17,8 @@ public class Board {
 	private String content;
 	
 	@ManyToOne //다대일
-	@JoinColumn(name="writer")//board테이블에 writer컬럼을 추가하고 외래키로 지정
-	private String writer;
-	
-	
+	// board 테이블에 writer컬럼을 추가하고 외래키로 지정
+	@JoinColumn(name="writer") 
+	private Member member;
 	
 }
