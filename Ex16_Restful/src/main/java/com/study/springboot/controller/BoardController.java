@@ -15,8 +15,6 @@ import com.study.springboot.domain.Board;
 import com.study.springboot.service.BoardService;
 import com.study.springboot.service.ReplyService;
 
-import jakarta.servlet.http.HttpSession;
-
 @Controller
 @SessionAttributes("loginUser")
 public class BoardController {
@@ -52,10 +50,9 @@ public class BoardController {
 	}
 	
 	@GetMapping("/detailForm")
-	public String detailForm(@RequestParam(value="bno") Long bno, Model model, HttpSession session) {
+	public String detailForm(@RequestParam(value="bno") Long bno, Model model) {
 		model.addAttribute("board", boardService.selectDetail(bno).get());
 		model.addAttribute("reply", replyService.selectAll(bno));
-		session.setAttribute("boardDetailUrl", "/detailForm?bno=" + bno);
 		return "board/detailForm";
 	}
 
@@ -71,3 +68,12 @@ public class BoardController {
 		return "redirect:list";
 	}
 }
+/*
+	 @GetMapping
+	역할: HTTP GET 요청을 처리하는 메서드에 붙입니다. 주로 데이터를 조회하거나, 웹 페이지를 반환하는 작업에 사용됩니다.
+	특징: GET 요청은 서버에 데이터를 요청하거나 특정 자원을 조회할 때 사용되며, URL에 파라미터를 포함할 수 있습니다. GET 요청은 보통 브라우저에서 페이지를 로드할 때 사용됩니다.
+	
+	@PostMapping
+	역할: HTTP POST 요청을 처리하는 메서드에 붙입니다. 주로 서버에 데이터를 전송하거나, 자원을 생성할 때 사용됩니다.
+	특징: POST 요청은 데이터를 서버로 전송할 때 사용됩니다. 보통 폼 데이터 제출, 파일 업로드 등과 같은 작업에 사용됩니다. POST 요청의 데이터는 요청 본문(body)에 포함되므로, GET 요청보다 더 많은 데이터를 보낼 수 있고, URL에 직접 나타나지 않습니다.
+ */

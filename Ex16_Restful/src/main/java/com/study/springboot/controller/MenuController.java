@@ -5,10 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MenuController {
-	
 	@RequestMapping("/menuForm")
-	public String menuList() {
-		
+	public String menuForm() {
 		return "menu/menuForm";
 	}
 }

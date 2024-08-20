@@ -16,7 +16,7 @@
 		
 		<br>
 		
-		<form action="update" method="post">
+		<form action="update" method="post"> <!--보안 유지 때문에 post / post 쓰면 id, password 안보임-->
 			<table align="center">
 				<tr>
 					<td>제목</td>
@@ -24,7 +24,7 @@
 				</tr>
 				<tr>
 					<td>작성자</td>
-					<td th:text="${board.writer}" readonly></td>
+					<td th:text="${board.writer}"></td>
 				</tr>
 				<tr>
 					<td>작성일</td>
