@@ -24,12 +24,13 @@ public class MemberController {
       return "/menu";
    }
    
+   //??갯수의 생성자를 만들지 않고 빌더를 사용하면 ??개를 넣어줄수 있다
    @RequestMapping("/insert")
    public String insert(@RequestParam("username") String username, Model model) {
       Member member = Member.builder()
-                  .username(username)
-                  .createDate(LocalDate.now())
-                  .build();
+                  			.username(username)
+                  			.createDate(LocalDate.now())
+                  			.build();
       
       Member result = memberService.insert(member);
       model.addAttribute("member", result);
