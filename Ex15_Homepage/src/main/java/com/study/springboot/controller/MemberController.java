@@ -53,7 +53,7 @@ public class MemberController {
 		return memberService.idCheck(id);
 	}
 	
-	@PostMapping("/memberInsert")
+	@GetMapping("/memberInsert")
 	public String memberInsert(Member member) {
 		String enPass = passwordEncoder.encode(member.getPassword());
 		member.setPassword(enPass);

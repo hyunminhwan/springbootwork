@@ -60,7 +60,7 @@ public class BoardController {
 	}
 
 	@PostMapping("/update")
-	public String update(Board board, Model model) {
+	public String update(Board board) {
 		boardService.update(board);
 		return "redirect:list";
 	}
